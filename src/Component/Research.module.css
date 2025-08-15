@@ -1,0 +1,16 @@
+.Research {
+  padding-top: 5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.Researchcontainer {
+  padding: 2rem;
+  background-image: linear-gradient(to right, rgb(233, 213, 255), rgb(187, 247, 208));
+  
+}
+.ResearchPara {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 1rem;
+}

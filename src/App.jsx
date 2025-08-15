@@ -1,16 +1,15 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from './Component/Header';
 import Home from "./Component/Home";
-import Member from './Component/Member';
 import React from 'react';
 import Event from "./Component/Event";
 import Project from "./Component/Project";
 import Research from "./Component/Research";
 import Contact from "./Component/Contact";
-import CurrentMember from "./Component/CurrentMember";
-import Interns from "./Component/Interns";
-import Alumni from "./Component/Alumni";
 import ReadMore from "./Component/ReadMore";
+import Interns from "./Component/Interns";
+import CurrentMember from "./Component/CurrentMember";
+import Alumni from "./Component/Alumni";
 
 
 
@@ -25,6 +24,15 @@ const Layout = () => {
   );
 };
 
+const MemberLayout = () => {
+  return (
+    <div>
+      
+      <Outlet />
+    </div>
+  );
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,8 +44,21 @@ const router = createBrowserRouter([
       },
       {
         path: "Member",
-        element: <Member />,
-        
+        element: <MemberLayout />,
+        children: [
+          {
+            path: "CurrentMember",
+            element: <CurrentMember />,
+          },
+          {
+            path: "Alumni",
+            element: <Alumni />,
+          },
+          {
+            path: "Interns",
+            element: <Interns />,
+          },
+        ]
       },
        {
          path: "readmore/:name", 
@@ -45,14 +66,7 @@ const router = createBrowserRouter([
 
       },
     
-       {
-        path: "Alumni",
-        element: <Alumni />,
-      },
-       {
-        path: "Interns",
-        element: <Interns />,
-      },
+       
       {
         path: "Contact",
         element: <Contact />,

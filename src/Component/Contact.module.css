@@ -1,0 +1,46 @@
+.contactPage {
+  height: 39rem;
+  background-image: linear-gradient(to right, rgb(233, 213, 255), rgb(187, 247, 208));
+}
+.contactContainer {
+  max-width: 500px;
+  margin: 4% 30% 0 30%;
+  padding: 20px;
+}
+
+.contactContainer h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contactContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactContainer label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contactContainer input,
+.contactContainer textarea {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contactContainer button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contactContainer button:hover {
+  background: #0056b3;
+}

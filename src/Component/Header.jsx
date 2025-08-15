@@ -39,9 +39,9 @@ const Header = () => {
               </button>
               {isMembersOpen && (
                 <ul className={styles.ismemberopen} onMouseLeave={() => setIsMembersOpen(!isMembersOpen)} >
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member" className={styles.Memberdropdown}>Current Members</Link></li>
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member" className={ styles.Memberdropdown}>Alumni</Link></li>
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member" className={styles.Memberdropdown}>Interns</Link></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/CurrentMember" className={styles.Memberdropdown}>Current Members</Link></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/Alumni" className={ styles.Memberdropdown}>Alumni</Link></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/Interns" className={styles.Memberdropdown}>Interns</Link></li>
                 </ul>
               )}
             </div>
