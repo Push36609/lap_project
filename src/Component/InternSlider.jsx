@@ -67,49 +67,49 @@ function InternSlider() {
 const data = [
   {
     name: `Ms. Shivangi `,
-    url: `Ms. Shivangi .jpg`,
+    url: `../Ms.Shivangi.jpg`,
     about: ` `
   },
   {
     name: `Ms. Priyanka`,
-    url: `Ms. Priyanka.jpg`,
+    url: `../Ms. Priyanka.jpg`,
     about: ` `
   },
   {
     name: `Mr. Ajay Gupta`,
-    url: `Mr. Ajay Gupta.jpg`,
+    url: `../Mr. Ajay Gupta.jpg`,
     about: `BCA(AI) from LLDIMS`
   },
   {
     name: `Ms. Shruti`,
-    url: `Ms. Shruti.jpg`,
+    url: `../ Ms. Shruti.jpg`,
     about: `BCA(AI) from LLDIMS `
   },
   {
     name: `Mr. Sahil Pant`,
-    url: `Mr. Sahil Pant.jpg`,
+    url: `../Mr. Sahil Pant.jpg`,
     about: ` `
   },
   {
     name: `Mr. Ankush Rawat`,
-    url: `Mr. Ankush Rawat.jpg`,
+    url: `../Mr. Ankush Rawat.jpg`,
     about: ` `
   },
   {
     name: `Mr. Rashid Reyaz`,
-    url: `Mr. Rashid Reyaz.jpg`,
+    url: `../Mr. Rashid Reyaz.jpg`,
     about: ``
   },
   {
     name: `Mr. Pushpendra`,
-    url: `Mr. Pushpendra.jpg`,
+    url: `../Mr. Pushpendra.jpg`,
     about: `BAC(AI) from LLDIMS`
   },
   {
     name: `Ms. Shravani Maity`,
-    url: `Ms. Shravani Maity.jpg`,
+    url: `../Ms. Shravani Maity.jpg`,
     about: `BCA(AI) from LLDIMS`
   },
-   
 ]
+
 export default InternSlider;

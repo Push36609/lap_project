@@ -72,52 +72,52 @@ function AlumniSlider() {
 const data = [
   {
     name: `Dr. Muniraj Gupta`,
-    url: `Dr. Muniraj Gupta.jpg`,
+    url: `../Dr.Muniraj Gupta.jpg`,
     about: `P.hD Computer Science, JNU.  M.Tech., NSUT, New Delhi`
   },
   {
     name: `Dr. Naveen Kumar Singh`,
-    url: `Dr. Naveen Kumar Singh.jpg`,
+    url: `../Dr. Naveen Kumar Singh.jpg`,
     about: `P.hD Computer Science, JNU. MCA, JNU`
   },
   {
     name: `Ms. Goldy Pandey`,
-    url: `Ms. Goldy Pandey.jpg`,
+    url: `../Ms. Goldy Pandey.jpg`,
     about: `P.hD Computer Science, JNU. M.Tech CS&T, JNU`
   },
   {
     name: `Ms. Mankirat Kaur`,
-    url: `Ms. Mankirat Kaur.jpg`,
+    url: `../Ms. Mankirat Kaur.jpg`,
     about: `M.Tech Computer Science & Technology, JNU`
   },
   {
     name: `Mr. Jamaluddin`,
-    url: `Mr. Jamaluddin.jpg`,
+    url: `../Mr. Jamaluddin.jpg`,
     about: ` PhD(CS) at AMU, Aligarh. M.Tech(CS) JNU. MCA & BSc(CS) from AMU`
   },
   {
     name: `Mr. Tirandij Pradhan`,
-    url: `Mr. Tirandij Pradhan.jpg`,
+    url: `../Mr. Tirandij Pradhan.jpg`,
     about: `PhD(CS) at AMU, Aligarh. M.Tech(CS) JNU. MCA & BSc(CS) from AMU`
   },
   {
     name: `Mr. Raja Babu`,
-    url: `Mr. Raja Babu.jpg`,
+    url: `../Mr. Raja Babu.jpg`,
     about: ``
   },
   {
     name: `Mr. Gulam Mazid`,
-    url: `Mr. Gulam Mazid.jpg`,
+    url: `../Mr. Gulam Mazid.jpg`,
     about: ``
   },
   {
     name: `Mr. Saquib Warsi`,
-    url: `Mr. Saquib Warsi.jpg`,
+    url: `../Mr. Saquib Warsi.jpg`,
     about: ``
   },
   {
     name: `Mr. Mritunjay Raj`,
-    url: `Mr. Mritunjay Raj.jpg`,
+    url: `../Mr. Mritunjay Raj.jpg`,
     about: ``
   },
 

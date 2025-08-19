@@ -1,53 +1,30 @@
-import styles from "./InFo.module.css"
 import React from "react";
+import styles from "./InFo.module.css";
 
+function Info() {
+  const sections = [
+    { title: "Administrative Positions/Activities" },
+    { title: "Awards/Honors" },
+    { title: "Academic Career/ Member" },
+    { title: "Other Professional Activities" },
+  ];
 
-function Info () {
-  return(
+  return (
     <div className={styles.InfoContainer}>
-      <h1 className={styles.Heading}>Administrative Positions/Activities</h1>
-     <div className={styles.InfoBox}>
-      container1
-     </div>
-      <div className={styles.InfoBox}>
-      container2
-     </div>
-      <div className={styles.InfoBox}>
-      container3
-     </div>
-     <h1 className={styles. Heading}>Awards/Honors</h1>
-      <div className={styles.InfoBox}>
-      container1
-     </div>
-      <div className={styles.InfoBox}>
-      container2
-     </div>
-      <div className={styles.InfoBox}>
-      container3
-     </div>
-      <h1 className={styles. Heading}>Academic Career/ Member</h1>
-      <div className={styles.InfoBox}>
-      container1
-     </div>
-      <div className={styles.InfoBox}>
-      container2
-     </div>
-      <div className={styles.InfoBox}>
-      container3
-     </div>
-     <h1 className={styles. Heading}>Other Professional Activities</h1>
-      <div className={styles.InfoBox}>
-      container1
-     </div>
-      <div className={styles.InfoBox}>
-      container2
-     </div>
-      <div className={styles.InfoBox}>
-      container3
-     </div>
-     
+      {sections.map((section, index) => (
+        <div  className={styles.Section} key={index}>
+          <h1 className={styles.Heading}>{section.title}</h1>
+        <div className={styles.InfoContent}>
+          {[1, 2, 3].map((num) => (
+            <div key={num} className={styles.InfoBox}>
+              container{num}
+            </div>
+          ))}
+          </div>
+        </div>
+      ))}
     </div>
-  )
- 
+  );
 }
-export default Info; 
+
+export default Info;

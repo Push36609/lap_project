@@ -1,36 +1,64 @@
-.InfoContainer {
-  width: 100%;
-  height: auto;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-} 
-.InfoBox:hover {
-  transform: scale(1.03); /* Slight zoom */
-  box-shadow: 0px 10px 24px rgba(142, 68, 173, 0.4);
-  border-color: #9b59b6;
-}
-.Heading{
-  width: 100%;
-  margin-left: 2%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(38, 163, 119);
-  text-shadow: 2px 2px 4px rgba(57, 225, 65, 0.7); 
-}
- 
-.InfoBox{
-  margin-top: 2%;
-  width: 30%;
-  min-width: 320px;
-  background-color: rgb(244, 250, 247);
-  height: 250px;
-  margin-left: 1%;
-  border-radius: 4%;
-  padding-bottom: 2.5%;
-  display: flex;
-  flex-wrap: wrap;
-  box-shadow: 5px 5px 15px;
-  border: 1px solid black; 
-   
-}
+ .InfoContainer {
+   width: 98%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   /* sections stack vertically */
+   gap: 2rem;
+   /* spacing between sections */
+ }
+
+ /* Each section wrapper */
+ .Section {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+
+ /* Heading style */
+ .Heading {
+   width: 100%;
+   margin-left: 2%;
+   font-family: Arial, Helvetica, sans-serif;
+   color: rgb(38, 163, 119);
+   text-shadow: 2px 2px 4px rgba(57, 225, 65, 0.7);
+
+ }
+
+ /* Individual InfoBox */
+ .InfoBox {
+   flex: 1 1 300px;
+   max-width: 30%;
+   min-width: 280px;
+   background-color: rgb(244, 250, 247);
+   height: 250px;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+   border: 1px solid black;
+   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+ }
+
+ /* Hover effect */
+ .InfoBox:hover {
+   transform: scale(1.03);
+   box-shadow: 0px 10px 24px rgba(142, 68, 173, 0.4);
+   border-color: #9b59b6;
+ }
+
+ /* Optional: InfoBox inner content */
+ .InfoContent {
+   width: 100%;
+   height: 100%;
+   gap: 1rem;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   margin-left: 1%;
+ }

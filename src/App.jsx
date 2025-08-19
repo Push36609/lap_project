@@ -14,6 +14,7 @@ import Alumni from "./Component/Alumni";
 
 
 
+
 // Layout component to wrap around all routes
 const Layout = () => {
   return (
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         path: "Member",
         element: <MemberLayout />,
         children: [
+          
+          {
+            path: "Interns",
+            element: <Interns />,
+          },
           {
             path: "CurrentMember",
             element: <CurrentMember />,
@@ -54,17 +60,14 @@ const router = createBrowserRouter([
             path: "Alumni",
             element: <Alumni />,
           },
-          {
-            path: "Interns",
-            element: <Interns />,
-          },
-        ]
-      },
+        ]},
+        
        {
          path: "readmore/:name", 
          element: <ReadMore /> 
 
       },
+     
     
        
       {

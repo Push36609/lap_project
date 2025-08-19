@@ -4,7 +4,41 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from './CurrentmemberSlider.module.css'
 import { useNavigate } from "react-router-dom";
- 
+
+
+ const data =[
+  {
+    name:`Mr. Kapil Dev`,
+    url:"../Mr. Kapil Dev.jpg",
+    about:`PhD Scholar`
+  },
+    {
+    name:`Ms. Anupma Gadhwal`,
+    url:"../Ms. Anupma Gadhwal.jpg",
+    about:`PhD Scholar`
+  },
+    {
+    name:`Mr. Saurabh Kumar`,
+    url:"../Mr. Saurabh Kumar.jpg",
+    about:`PhD Scholar`
+  },
+    {
+    name:`Mrs. Pooja Tiwari`,
+    url:"../Mrs. Pooja Tiwari.jpg",
+    about:`PhD Scholar`
+  },
+    {
+    name:`Mr. Sayantan Das`,
+    url:"../Mr. Sayantan Das.jpg",
+    about:`Research Associate`
+  },
+    {
+    name:`Mr. Anil Kumar`,
+    url:"../Mr. Anil Kumar.jpg",
+    about:`PhD Scholar`
+  }
+
+]
 
 
 function CurrentmemberSlider(){
@@ -70,37 +104,5 @@ function CurrentmemberSlider(){
   )
 }
 
-const data =[
-  {
-    name:`Mr. Kapil Dev`,
-    url:`Mr. Kapil Dev.jpg`,
-    about:`PhD Scholar`
-  },
-    {
-    name:`Ms. Anupma Gadhwal`,
-    url:`Ms. Anupma Gadhwal.jpg`,
-    about:`PhD Scholar`
-  },
-    {
-    name:`Mr. Saurabh Kumar`,
-    url:`Mr. Saurabh Kumar.jpg`,
-    about:`PhD Scholar`
-  },
-    {
-    name:`Mrs. Pooja Tiwari`,
-    url:`Mrs. Pooja Tiwari.jpg`,
-    about:`PhD Scholar`
-  },
-    {
-    name:`Mr. Sayantan Das`,
-    url:`Mr. Sayantan Das.jpg`,
-    about:`Research Associate`
-  },
-    {
-    name:`Mr. Anil Kumar`,
-    url:`Mr. Anil Kumar.jpg`,
-    about:`PhD Scholar`
-  }
 
-]
 export default CurrentmemberSlider;

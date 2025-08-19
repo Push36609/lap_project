@@ -6,6 +6,7 @@ import CurrentmemberSlider from './CurrentmemberSlider';
 import AlumniSlider from './AlumniSlider';
 import InternSlider from './InternSlider';
 import styles from "./Home.module.css";
+import Footer from './Footer';
 
 
 
@@ -29,6 +30,7 @@ function Home() {
       <CurrentmemberSlider />
       <AlumniSlider />
       <InternSlider />
+      <Footer />
     </div>
   );
 }
