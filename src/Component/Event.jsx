@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Event.module.css';
+// import styles from './Event.module.css';
 
 const events = [
   { id: 1, title: "Annual Science Conference", date: "2025-09-12" },
@@ -16,17 +16,17 @@ const events = [
 
 export default function Event() {
   return (
-    <div className={styles.EventPage}>
-      <div className={styles.EventContainer}>
-        <h2>Upcoming Events</h2>
-        <ul className={styles.EventList}>
+    <div className="bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 mt-16 pt-4 h-screen">
+      <div className="pl-16 h-screen m-auto items-center ml-[10%]">
+        <h2 className='text-4xl font-bold m-6 mt-6'>Upcoming Events</h2>
+        <ul className="list-none p-0 max-w-[90%] items-center">
           {events.map(event => (
             <li
               key={event.id}
-              className={styles.EventItem}
+              className="flex justify-between items-center p-2.5 bg-white rounded-lg border-1 border-white mb-2.5"
             >
-              <span className={styles.EventTitle}>{event.title}</span>
-              <span className={styles.EventDate}>
+              <span className="font-bold">{event.title}</span>
+              <span className="text-gray-400">
                 {new Date(event.date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "short",

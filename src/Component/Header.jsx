@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "./Header.module.css"
 import { Link } from "react-router-dom"
 
 const Header = () => {
@@ -8,26 +7,27 @@ const Header = () => {
 
 
   return (
-    <header className={styles.maincontainer}>
+    <header className="bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 fixed top-0 left-0 w-full z-50 bg-white shadow">
 
-      <div className={styles.HeadContainer}>
-        <div className={styles.container}>
-          <div className={styles.logo}>Bio-COMPUTATIONAL LAB</div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-black">
+        <div className="flex justify-between h-16 items-center">
+          <div className="font-sans font-semibold text-2xl tracking-[0.6px] text-center my-4 
+         bg-gradient-to-r from-[#6a11cb] to-[#2575fc] bg-clip-text text-transparent 
+         transition-transform duration-300 ease-in-out ... hover:scale-105 hover:shadow-lg">Bio-COMPUTATIONAL LAB</div>
 
           {/* Desktop nav */}
-          <nav className={styles.navContainer}>
-            <Link to="/Home" className={styles.home}>Home</Link>
+          <nav className=" hidden md:flex space-x-8 text-xl leading-7 items-center">
+            <Link to="/Home" className="text-[#551A8B] no-underline text-[1.3rem] hover:text-cyan-600 hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Home</Link>
 
             {/* Members dropdown */}
-            <div className={styles.memberContainer}>
+            <div className="relative h-150px ">
               <button
                 onClick={() => setIsMembersOpen(prev => !prev)}
-                className={styles.onclick}
+                className="flex items-center ml-1 bg-none border-none hover:text-[#0891b2] space-x-1 hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]"
               >
-                <span className={styles.member}>Members</span>
+                <span className="text-[#551A8B] text-[1.25rem] hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Members</span>
                 <svg
-                  className={styles.membericon}
-                  // {`w-4 h-4 transform transition-transform ${isMembersOpen ? "rotate-180" : "rotate-0"}`}
+                  className={`w-4 h-4 transform transition-transform ${isMembersOpen ? "rotate-180" : "rotate-0"}`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -38,26 +38,26 @@ const Header = () => {
                 </svg>
               </button>
               {isMembersOpen && (
-                <ul className={styles.ismemberopen} onMouseLeave={() => setIsMembersOpen(!isMembersOpen)} >
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/CurrentMember" className={styles.Memberdropdown}>Current Members</Link></li>
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/Alumni" className={ styles.Memberdropdown}>Alumni</Link></li>
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/Interns" className={styles.Memberdropdown}>Interns</Link></li>
+                <ul className="absolute top-full mt-2 bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 w-40 rounded-2xl text-black" onMouseLeave={() => setIsMembersOpen(!isMembersOpen)} >
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/Current Member" className="block py-2 px-2 text-[#551A8B] text-[1rem] hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Current Members</Link></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/Alumni" className="block py-2 px-2 text-[#551A8B] text-[1rem] hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Alumni</Link></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member/Interns" className="block py-2 px-2 text-[#551A8B] text-[1rem] hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Interns</Link></li>
                 </ul>
               )}
             </div>
 
-            <Link to="/Research" className={styles.dropdown}>Research</Link>
-            <Link to="/Event" className={styles.dropdown}>Event</Link>
-            <Link to="/Project" className={styles.dropdown}>Project</Link>
-            <Link to="/contact" className={styles.dropdown}>Contact Us</Link>
+            <Link to="/Research" className="text-8 text-[#551A8B] no-underline hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Research</Link>
+            <Link to="/Event" className="text-8 text-[#551A8B] no-underline hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Event</Link>
+            <Link to="/Project" className="text-8 text-[#551A8B] no-underline hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Project</Link>
+            <Link to="/contact" className="text-8 text-[#551A8B] no-underline hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Contact Us</Link>
           </nav>
 
           {/* Mobile menu button */}
-          <div className={styles.menu_container}>
+          <div className="md:hidden">
             <button
               onClick={() => { setIsMenuOpen(prev => !prev); setIsMembersOpen(false); }}
-              className={styles.button_container}>
-              <svg className={styles.icons} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              className="text-gray-800 hover:text-cyan-600 focus:outline-none">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M6 18L18 6M6 6l12 12" />
@@ -72,17 +72,17 @@ const Header = () => {
       </div>
       {/* Mobile nav */}
       {isMenuOpen && (
-        <div className={styles.mobileNav}>
-          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Home" className={styles.Monclick}>Home</Link>
+        <div className="md:hidden px-4 pt-2 pb-4 text-lg leading-7 space-y-1 ">
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Home" className="block bg-none no-underline hover:text-cyan-600">Home</Link>
 
           {/* Mobile Members dropdown */}
           <div>
             <button
               onClick={() => setIsMembersOpen(prev => !prev)}
-              className={styles.MbuttonContainer}>
-              <span className={styles.Memberdropdown}>Members</span>
+              className="flex justify-between w-full py-2 bg-none border-none hover:text-cyan-600 hover:bg-none">
+              <span className="bg-none no-underline hover:text-cyan-600">Members</span>
               <svg
-                className={`${styles.Mismemberopen} ${isMembersOpen ? "rotate-180" : "rotate-0"
+                className={`${"w-5 h-5 pt-2 pr-[5px] transition-transform duration-200 ease-in-out rotate-0"} ${isMembersOpen ? "rotate-180" : "rotate-0"
                   }`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -94,18 +94,22 @@ const Header = () => {
               </svg>
             </button>
             {isMembersOpen && (
-              <ul className={styles.Mdropdown}>
-                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member" className={styles.Memberdropdown}>Current Member</Link></li>
-                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member" className={styles.Memberdropdown}>Alumni</Link></li>
-                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member" className={styles.Memberdropdown}>Interns</Link></li>
+              <ul className="pl-4 space-y-1">
+                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member/Current Members" className="block py-1 hover:text-cyan-600">Current Member</Link></li>
+                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member/Alumni" className="block py-1 hover:text-cyan-600">Alumni</Link></li>
+                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member/Interns" className="block py-1 hover:text-cyan-600">Interns</Link></li>
               </ul>
             )}
           </div>
 
-          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Research" className={styles.Memberdropdown}>Research</Link>
-          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Event" className={styles.Memberdropdown}>Event</Link>
-          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="Project" className={styles.Memberdropdown}>Project</Link>
-          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/contact" className={styles.Memberdropdown}>Contact Us</Link>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Research" className="block py-2 no-underline text-base text-[#551A8B] bg-transparent 
+         hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Research</Link>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Event" className="block py-2 no-underline text-base text-[#551A8B] bg-transparent 
+         hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Event</Link>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Project" className="block py-2 no-underline text-base text-[#551A8B] bg-transparent 
+         hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Project</Link>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/contact" className="block py-2 no-underline text-base text-[#551A8B] bg-transparent 
+         hover:text-[#0891b2] hover:drop-shadow-[0_6px_6px_rgba(3,245,249,0.8)]">Contact Us</Link>
         </div>
       )}
     </header>

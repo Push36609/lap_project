@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from './CurrentmemberSlider.module.css'
+// import styles from './CurrentmemberSlider.module.css'
 import { useNavigate } from "react-router-dom";
 
 
@@ -76,20 +76,21 @@ function CurrentmemberSlider(){
   ]
   };
   return(
-    <div className={styles.cardsliderContainer}>
-      <h1 className={styles.currentmember}>Current Member</h1>
-        <div className={styles.cardContainer}>
+    <div className="w-[90%] m-auto h-auto">
+      <h1 className="items-center justify-center flex pt-10 font-sans text-5xl text-[rgb(38,163,119)] [text-shadow:2px_2px_4px_rgba(57,225,65,0.7)]">Current Member</h1>
+        <div className="mt-4 cursor-pointer mb-8">
           <Slider {...settings}>
           {data.map((d) => (
-            <div className={styles.cardBox}>
-              <div className={styles.imageBox}> 
-                <img src={d.url} alt="image"  className={styles.image}/>
+            <div className="bg-white h-112 text-black rounded-3xl max-w-95 shadow-lg justify-between border-2 border-blue-200 ml-6 transform-3d animate-[rotate_15s_linear_infinite]
+                              hover:[box-shadow:10px_10px_10px_rgba(244,239,239,0.2)]">
+              <div className="h-56 rounded-tl-2xl rounded-tr-2xl bg-teal-100  flex justify-center items-center perspective-dramatic"> 
+                <img src={d.url} alt="image"  className="h-52 w-52 rounded-full hover:translate-z-3"/>
               </div>
 
-              <div className={styles.textBox}>
-                <h1 className={styles.Name}>{d.name}</h1>
-                <h2 className={styles.about}>{d.about}</h2>
-                <button className={styles.readButton}
+              <div className="flex flex-col justify-center items-center gap-3">
+                <h1 className="text-xl font-bold pt-4 ">{d.name}</h1>
+                <h2 className="font-medium mt-0 mx-4">{d.about}</h2>
+                <button className="mt-2.5 bg-purple-300 text-white text-lg px-1 py-2.5 rounded-xl border-none"
                 onClick={() =>
                     navigate(`/readmore/${encodeURIComponent(d.name)}`, {
                       state: { name: d.name, url: d.url, about: d.about },

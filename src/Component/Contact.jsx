@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "./Contact.module.css";
  
 
 export default function Contact() {
@@ -23,15 +22,17 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.contactPage}>
-    <div className = {`${styles.contactContainer}`}>
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="h-156 bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100">
+    <div className = "max-w-125 mx-[30%] mt-[4%] p-5">
+      <h2 className="text-center text-3xl mb-5">Contact Us</h2>
+      <form className="flex flex-col" onSubmit={handleSubmit}>
         
-        <label>Name</label>
+        <label className="mb-1.25 ">Name</label>
         <input
+          className="p-2 mb-4 border bg-white border-gray-600 rounded-[5px]"
           type="text"
           name="name"
+          placeholder="Enter your name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -39,8 +40,10 @@ export default function Contact() {
 
         <label>Email</label>
         <input
+          className="p-2 mb-4 border bg-white border-gray-600 rounded-[5px]"
           type="email"
           name="email"
+          placeholder="Enter your email"
           value={formData.email}
           onChange={handleChange}
           required
@@ -48,14 +51,17 @@ export default function Contact() {
 
         <label>Message</label>
         <textarea
+          className="p-2 mb-4 border bg-white border-gray-600 rounded-[5px]"
           name="message"
+          placeholder="Enter your message"
           value={formData.message}
           onChange={handleChange}
           required
           rows="5"
         ></textarea>
 
-        <button type="submit">Submit</button>
+        <button className="p-2.5 bg-blue-600 text-white border-none rounded-[5px] cursor-pointer text-[16px] hover:bg-blue-600"
+         type="submit">Submit</button>
       </form>
     </div>
   </div>
