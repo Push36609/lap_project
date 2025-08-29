@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function Login() {
+ function Login() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100">
       {/* Animated Card */}
@@ -93,3 +93,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default Login;
