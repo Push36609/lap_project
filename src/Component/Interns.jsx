@@ -88,6 +88,11 @@ function Interns() {
                                max-[768px]:text-base max-[768px]:text-center
                                max-[480px]:text-base max-[480px]:text-center
                                max-[280px]:text-sm max-[280px]:text-center">{intern.about}</h2>
+                <button className="mt-2.5 bg-purple-300 text-white text-lg px-1 py-2.5 rounded-xl border-none hover:bg-purple-400 hover:scale-105 transition-transform"
+                onClick={() =>
+                    navigate(`./ReadMore/${encodeURIComponent(intern.name)}`, {
+                      state: { name: intern.name, url: intern.url },
+                      }) }>Read More</button>
                 </div>
               </div>
             

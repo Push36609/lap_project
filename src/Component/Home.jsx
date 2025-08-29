@@ -1,11 +1,11 @@
 import React from 'react';
-import Hero from './Hero';
 import Intro from './Intro';
+import Hero from './Hero';
 import InFo from './InFo';
 import CurrentmemberSlider from './CurrentmemberSlider';
 import AlumniSlider from './AlumniSlider';
 import InternSlider from './InternSlider';
-// import styles from "./Home.module.css";
+import ImageSlider from './ImageSlider';
 import Footer from './Footer';
 
 
@@ -31,6 +31,7 @@ function Home() {
       <CurrentmemberSlider />
       <AlumniSlider />
       <InternSlider />
+      <ImageSlider />
       <Footer />
     </div>
   );

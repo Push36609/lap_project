@@ -1,21 +1,173 @@
-import React from 'react'
-// import styles from './Project.module.css';
+import React from "react";
 
 const Project = () => {
   return (
-    <div className="mt-16 pt-2 bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 " >
-      <div className="max-w-full mx-5 pb-5">
-       <h1 className='text-4xl mb-4'>Research on Machine Learning</h1>
-       <p className='leading-8 text-xl font-sans'> The Computational Lab Project on Machine Learning was designed to provide students with practical exposure to the process of developing, training, and evaluating intelligent systems capable of learning from data. Conducted in a well-equipped computational laboratory environment, the project aimed to bridge the gap between theoretical machine learning concepts and their real-world applications. Students were tasked with selecting a specific problem domain—such as image classification, text sentiment analysis, or predictive analytics—and applying appropriate machine learning techniques to produce an effective and reliable solution.
-                    The project began with data acquisition and preprocessing, a critical step in ensuring model accuracy and stability. Datasets were sourced from public repositories or simulated for experimental purposes. The preprocessing phase involved handling missing values, removing outliers, encoding categorical variables, and scaling or normalizing numerical features. Data was split into training, validation, and test sets to enable robust evaluation. Emphasis was placed on computational efficiency, with students utilizing vectorized operations and optimized data pipelines to process large datasets without excessive delays.
-                    Following preprocessing, participants selected and implemented suitable machine learning algorithms based on the nature of the task. For supervised learning problems, models such as decision trees, random forests, support vector machines, and deep neural networks were explored. Unsupervised tasks made use of clustering algorithms like k-means or DBSCAN, as well as dimensionality reduction techniques such as principal component analysis (PCA). Implementation relied on popular frameworks, including Scikit-learn, TensorFlow, and PyTorch, with GPU acceleration used for deep learning workloads.
-                    Model training was conducted in an iterative manner, involving hyperparameter tuning through grid search, random search, or Bayesian optimization. Performance was measured using appropriate metrics: accuracy, precision, recall, and F1-score for classification tasks, and mean squared error (MSE) or R-squared values for regression. Cross-validation was employed to improve model generalization, and regularization techniques such as dropout and early stopping were used to prevent overfitting. Visualization tools, including confusion matrices and learning curves, helped in diagnosing model behavior and guiding improvements.
-                    An important aspect of the project was the focus on interpretability and ethical considerations. Explainable AI methods, such as SHAP and LIME, were applied to understand how models arrived at specific predictions. This process helped identify potential biases in the data and ensured fairness in results. Ethical discussions emphasized data privacy, transparency, and the societal implications of machine learning systems.
-                    In the deployment phase, models were packaged for real-world use, often via REST APIs or web interfaces. Lightweight model formats were tested for edge deployment, and performance monitoring strategies were implemented to detect accuracy drops over time. A comprehensive report documented all phases of the project, from problem definition to deployment, including methodologies, results, and lessons learned.
-                    Overall, the Computational Lab Project provided participants with a complete, end-to-end experience in machine learning, strengthening their technical, analytical, and collaborative skills. It highlighted the importance of not only building accurate models but also ensuring they are efficient, interpretable, and ethically sound..</p>
+    <div className="mt-16 pt-10 bg-gradient-to-r from-blue-100 via-purple-100 to-cyan-100 min-h-screen">
+      <div className="max-w-6xl mx-auto px-6 pb-10">
+        {/* Title */}
+        <h1 className="text-2xl md:text-4xl font-bold mb-6  bg-gradient-to-r from-blue-500 via-purple-700 to-cyan-500 bg-clip-text text-transparent text-center ">
+          PROJECT 1
+        </h1>
+
+        {/* Content */}
+        <p className="leading-8 text-lg md:text-xl font-sans text-gray-900 bg-white/90 shadow-lg p-6 rounded-2xl">
+          <span className="text-blue-700 font-semibold">Title :</span> ‘ Machine
+          learning-based approaches to profile breast cancer genomic alterations
+          and target key identifications’
+          <span className="text-purple-700 font-semibold"> <br /> About :</span>  under Dr. Saurabh Kumar Sharma, Assistant Professor , school of Computer and systems Sciences,Jawaharlal Nehru university-110067
+
+          <br />
+          <span className="text-green-600 font-semibold">Organization :</span>
+          DHR/ICMR
+          <br />
+          <span className="text-indigo-600 font-semibold"> Date :</span> 2021 Dec to 2024 Dec <br />
+        </p>
+
+
+        {/* project2 */}
+        <div className="max-w-6xl mx-auto px-6 pb-10">
+          {/* Title */}
+          <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 via-purple-700 to-cyan-500 bg-clip-text text-transparent align-top-left"><br />
+            PROJECT 2
+          </h1>
+
+          {/* Content */}
+          <p className="leading-8 text-lg md:text-xl font-sans text-gray-900 bg-white/90 shadow-lg p-6 rounded-2xl">
+            <span className="text-blue-700 font-semibold">Title :</span> Evolutionary genome Complexity of SARS-COV-2 Virus and search for therapeutic translational medicine.
+
+            <span className="text-purple-700 font-semibold"><br /> About :</span>  under Dr. Saurabh Kumar Sharma, Assistant Professor , school of Computer and systems Sciences,Jawaharlal Nehru university-110067
+
+            <br />
+            <span className="text-green-600 font-semibold">Organization :</span>
+            ICMR
+            <br />
+            <span className="text-indigo-600 font-semibold"> Date :</span> 2022 March to 2024 March <br />
+          </p>
+
+
+          {/* project3 */}
+          <div className="max-w-6xl mx-auto px-6 pb-10">
+            {/* Title */}
+            <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 via-purple-700 to-cyan-500 bg-clip-text text-transparent align-top-left"><br />
+              PROJECT 3
+            </h1>
+
+            {/* Content */}
+            <p className="leading-8 text-lg md:text-xl font-sans text-gray-900 bg-white/90 shadow-lg p-6 rounded-2xl">
+              <span className="text-blue-700 font-semibold">Title :</span> Stochastic Framework …….COVID19 India
+
+
+
+              <span className="text-purple-700 font-semibold"><br /> About :</span>  under Dr. Saurabh Kumar Sharma, Assistant Professor , school of Computer and systems Sciences,Jawaharlal Nehru university-110067
+
+              <br />
+              <span className="text-green-600 font-semibold">Organization :</span>
+              ICSSR
+              <br />
+              <span className="text-indigo-600 font-semibold"> Date :</span> 2022 March to 2024 March <br />
+            </p>
+
+
+            {/* project4*/}
+            <div className="max-w-6xl mx-auto px-6 pb-10">
+              {/* Title */}
+              <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 via-purple-700 to-cyan-500 bg-clip-text text-transparent align-top-left"><br />
+                PROJECT 4
+              </h1>
+
+              {/* Content */}
+              <p className="leading-8 text-lg md:text-xl font-sans text-gray-900 bg-white/90 shadow-lg p-6 rounded-2xl">
+                <span className="text-blue-700 font-semibold">Title :</span> Traditional Knowledge Hybfon Indigenous Communities in India
+
+
+                <span className="text-purple-700 font-semibold"><br /> About :</span>  under Dr. Saurabh Kumar Sharma, Assistant Professor , school of Computer and systems Sciences,Jawaharlal Nehru university-110067
+
+                <br />
+                <span className="text-green-600 font-semibold">Organization :</span>
+                GISF HUB/IIT-B/DST
+
+
+                <br />
+                <span className="text-indigo-600 font-semibold"> Date :</span>2023 sep to 2025 sep
+
+                <br />
+              </p>
+
+              {/* project5 */}
+              <div className="max-w-6xl mx-auto px-6 pb-10">
+                {/* Title */}
+                <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 via-purple-700 to-cyan-500 bg-clip-text text-transparent align-top-left"><br />
+                  PROJECT 5
+                </h1>
+
+                {/* Content */}
+                <p className="leading-8 text-lg md:text-xl font-sans text-gray-900 bg-white/90 shadow-lg p-6 rounded-2xl">
+                  <span className="text-blue-700 font-semibold">Title :</span> Dr. Kushagra Project
+
+
+                  <span className="text-purple-700 font-semibold"> <br />About :</span>  under Dr. Saurabh Kumar Sharma, Assistant Professor , school of Computer and systems Sciences,Jawaharlal Nehru university-110067
+
+                  <br />
+                  <span className="text-green-600 font-semibold">Organization :</span>
+                  ICMA-RA
+
+                  <br />
+                  <span className="text-indigo-600 font-semibold"> Date :</span> 2023 Jan to July 2024
+
+                  <br />
+                </p>
+                {/* project6*/}
+                <div className="max-w-6xl mx-auto px-6 pb-10">
+                  {/* Title */}
+                  <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 via-purple-700 to-cyan-500 bg-clip-text text-transparent align-top-left"><br />
+                    PROJECT 6
+                  </h1>
+
+                  {/* Content */}
+                  <p className="leading-8 text-lg md:text-xl font-sans text-gray-900 bg-white/90 shadow-lg p-6 rounded-2xl">
+                    <span className="text-blue-700 font-semibold">Title :</span> Dr. Neelam Dabar Sen - Ramalingaswami Fellow
+
+                    <span className="text-purple-700 font-semibold"><br /> About :</span>  under Dr. Saurabh Kumar Sharma, Assistant Professor , school of Computer and systems Sciences,Jawaharlal Nehru university-110067
+
+                    <br />
+                    <span className="text-green-600 font-semibold">Organization :</span>
+                    DBT
+                    <br />
+                    <span className="text-indigo-600 font-semibold"> Date :</span> 2024 July <br />
+                  </p>
+                  {/* project7 */}
+                  <div className="max-w-6xl mx-auto px-6 pb-10">
+                    {/* Title */}
+                    <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 via-purple-700 to-cyan-500 bg-clip-text text-transparent align-top-left"><br />
+                      PROJECT 7
+                    </h1>
+
+                    {/* Content */}
+                    <p className="leading-8 text-lg md:text-xl font-sans text-gray-900 bg-white/90 shadow-lg p-6 rounded-2xl">
+                      <span className="text-blue-700 font-semibold">Title :</span> “Unravelling the multi-targeted curative potential medicinal herbs and their phytochemicals against Friedreich Ataxia: an integrated approach”
+
+
+                      <span className="text-purple-700 font-semibold"><br /> About :</span>  under Dr. Prachi Shripatrao Yadav, Senior Scientist, Room No. 49, Division of Genetics, ICAR-Indian Agriculture Research Institute, pusa CAmpus , New Delhi-110012.
+
+                      <br />
+                      <span className="text-green-600 font-semibold">Organization :</span>
+                      ICMR
+                      <br />
+                      <span className="text-indigo-600 font-semibold"> Date :</span> 2025 March to 2028 March <br />
+                    </p>
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

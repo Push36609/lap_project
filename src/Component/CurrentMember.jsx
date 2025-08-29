@@ -74,9 +74,9 @@ function CurrentMember() {
                          max-[480px]:text-[1rem] max-[480px]:text-center
                          max-[280px]:text-xl max-[280px]:text-center">{member.about}</h2>
 
-           <button className="bg-pink-300 text-gray-950 font-semibold border-none rounded-md px-2 py-2 cursor-pointer"
+           <button className="bg-pink-300 text-gray-950 font-semibold border-none rounded-md px-2 py-2 cursor-pointer hover:bg-pink-500 hover:text-white"
                 onClick={() =>
-                    navigate(`/readmore/${encodeURIComponent(member.name)}`, {
+                    navigate(`/ReadMore/${encodeURIComponent(member.name)}`, {
                       state: { name: member.name, url: member.url, about: member.about },
                     })
                   }>Read More</button>

@@ -51,7 +51,7 @@ function CurrentmemberSlider(){
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     responsive: [
     {
       breakpoint: 1224, // tablets and below
@@ -61,7 +61,7 @@ function CurrentmemberSlider(){
         infinite: true,
         dots: true,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
       }
     },
     {
@@ -69,6 +69,7 @@ function CurrentmemberSlider(){
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        infinite: true, 
         autoplay: true,
         autoplaySpeed: 2000,
       }
@@ -78,7 +79,7 @@ function CurrentmemberSlider(){
   return(
     <div className="w-[90%] m-auto h-auto">
       <h1 className="items-center justify-center flex pt-10 font-sans text-5xl text-[rgb(38,163,119)] [text-shadow:2px_2px_4px_rgba(57,225,65,0.7)]">Current Member</h1>
-        <div className="mt-4 cursor-pointer mb-8">
+        <div className="mt-4 cursor-pointer mb-8 items-center justify-center">
           <Slider {...settings}>
           {data.map((d) => (
             <div className="bg-white h-112 text-black rounded-3xl max-w-95 shadow-lg justify-between border-2 border-blue-200 ml-6 transform-3d animate-[rotate_15s_linear_infinite]
@@ -90,7 +91,7 @@ function CurrentmemberSlider(){
               <div className="flex flex-col justify-center items-center gap-3">
                 <h1 className="text-xl font-bold pt-4 ">{d.name}</h1>
                 <h2 className="font-medium mt-0 mx-4">{d.about}</h2>
-                <button className="mt-2.5 bg-purple-300 text-white text-lg px-1 py-2.5 rounded-xl border-none"
+                <button className="mt-2.5 bg-purple-300 text-white text-lg px-1 py-2.5 rounded-xl border-none hover:bg-purple-400 hover:scale-105 transition-transform"
                 onClick={() =>
                     navigate(`/readmore/${encodeURIComponent(d.name)}`, {
                       state: { name: d.name, url: d.url, about: d.about },

@@ -34,7 +34,7 @@ const Intro = () => {
                                max-[1024px]:text-3xl max-[1024px]:text-center
                                max-[768px]:text-2xl max-[768px]:text-center
                                max-[480px]:text-2xl max-[480px]:text-center
-                               max-[280px]:text-base max-[280px]:text-center">Assistent Profesor</h2>
+                               max-[280px]:text-base max-[280px]:text-center">Assistant Professor</h2>
                 <p className="text-base text-gray-800 mb-3 mx-2 w-[70%]
                                max-[1024px]:text-2xl max-[1024px]:text-center max-[1024px]:w-[95%]
                                max-[768px]:text-xl max-[768px]:text-center 

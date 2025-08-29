@@ -1,22 +1,24 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
 // import styles from "./Footer.module.css";
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function Footer() {
   return (
-    <footer className="w-full box-border bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 text-purple-700 pl-4 pr-8 font-sans border-t-2  [border-image: linear-gradient(to right, #b99ee8, #a2d5b7);] ">
+    <footer className="w-full box-border bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 text-purple-700 mt-5 pl-4 pr-8 font-sans border-t-2  [border-image: linear-gradient(to right, #b99ee8, #a2d5b7);] ">
       <div className="flex justify-between flex-wrap max-w-300 mx-auto gap-12">
 
         <div className="flex-[1_1_200px] mb-4 mt-4">
           <h2 className="text-2xl font-bold">BioComputaionalLab</h2>
           <p className="my-2 mx-0 leading-6 text-[rgb(38,31,31)] text-base">
-            “BioComputationalLab is dedicated to advancing computational biology through innovative research, collaboration, and development of cutting-edge bioinformatics tools. We strive to bridge biology and computation to tackle complex biomedical challenges.”</p> 
+            “BioComputationalLab is dedicated to advancing computational biology through innovative research, collaboration, and development of cutting-edge bioinformatics tools. We strive to bridge biology and computation to tackle complex biomedical challenges.”</p>
           <div className="flex gap-3 mt-2">
-            <a className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" href="#"><FaFacebookF /></a>
-            <a className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" href="#"><FaTwitter /></a>
-            <a className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" href="#"><FaLinkedinIn /></a>
-            <a className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" href="#"><FaYoutube /></a> 
+            <Link className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" to="#"><FaFacebookF /></Link>
+            <Link className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" to="#"><FaTwitter /></Link>
+            <Link className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" to="#"><FaLinkedinIn /></Link>
+            <Link className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" to="#"><FaYoutube /></Link>
+            <Link className="text-gray-800 text-base transition-colors duration-300 ease-in-out hover:text-purple-600" to="#"><FaInstagram /></Link>
           </div>
         </div>
 

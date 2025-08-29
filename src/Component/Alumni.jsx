@@ -96,9 +96,9 @@ function Alumni() {
                  max-[480px]:text-[1rem]
                 max-[280px]:text-[0.9rem]">{Alumni.about}</h2>
 
-              <button className="bg-purple-300 text-neutral-900 border-none rounded-[5px] px-2 py-2 cursor-pointer"
+              <button className="bg-purple-300 text-neutral-900 border-none rounded-[5px] px-2 py-2 cursor-pointer hover:bg-purple-500 hover:text-white"
                 onClick={() =>
-                  navigate(`/readmore/${encodeURIComponent(Alumni.name)}`, {
+                  navigate(`/ReadMore/${encodeURIComponent(Alumni.name)}`, {
                     state: { name: Alumni.name, url: Alumni.url, about: Alumni.about },
                   })
                 }>Read More</button>

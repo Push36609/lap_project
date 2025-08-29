@@ -10,6 +10,7 @@ import ReadMore from "./Component/ReadMore";
 import Interns from "./Component/Interns";
 import CurrentMember from "./Component/CurrentMember";
 import Alumni from "./Component/Alumni";
+import Login from "./Component/login";
 
 
 
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         path: "Home",
         element: <Home />,
       },
+
+      {
+        path: "login",
+        element: <Login />,
+      },
       {
         path: "Member",
         element: <MemberLayout />,
@@ -63,8 +69,8 @@ const router = createBrowserRouter([
         ]},
         
        {
-         path: "readmore/:name", 
-         element: <ReadMore /> 
+         path: "ReadMore/:name",
+         element: <ReadMore />
 
       },
      

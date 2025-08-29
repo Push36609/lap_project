@@ -54,7 +54,7 @@ function InternSlider() {
               <div className="flex flex-col items-center justify-center gap-3">
                 <h1 className="text-xl font-extrabold">{d.name}</h1>
                 <h2 className="font-medium mt-0 ml-5">{d.about}</h2>
-                <button className="bg-purple-300 text-white text-lg border-none rounded-md px-2 py-2 cursor-pointer">Read More</button>
+                <button className="bg-purple-300 text-white text-lg border-none rounded-md px-2 py-2 cursor-pointer hover:bg-purple-400 hover:scale-105 transition-transform">Read More</button>
               </div>
             </div>
           ))}
@@ -72,7 +72,7 @@ const data = [
   },
   {
     name: `Ms. Priyanka`,
-    url: `../Ms. Priyanka.jpg`,
+    url: `../Ms.Priyanka.jpg`,
     about: ` `
   },
   {
@@ -82,7 +82,7 @@ const data = [
   },
   {
     name: `Ms. Shruti`,
-    url: `../ Ms. Shruti.jpg`,
+    url: `../Ms. Shruti.jpg`,
     about: `BCA(AI) from LLDIMS `
   },
   {

@@ -1,64 +1,105 @@
-import React, { useEffect, useRef, useState } from 'react'
-// import styles from './Hero.module.css';
-import data from './data.json';
+import React, { useState, useRef, useEffect } from "react";
+ 
+// import data from "./data.json";
 
+const slides = [
+  {
+    content: (
+      <div className="text-center px-6">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-black leading-tight">
+          Welcome to <br /> Health Informatics
+        </h1>
+        <p className="mt-4 text-lg md:text-xl">
+          <span className="text-blue-600 font-semibold">Advancing</span> Bioinformatics and{" "}
+          <span className="text-lime-500 font-semibold">Computational Biology</span>
+        </p>
+      </div>
+    ),
+  },
+  {
+    content: (
+      <div className="text-center px-6">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-black leading-tight">
+          We believe we can always <br /> do more and better
+        </h1>
+        <p className="mt-4 text-lg md:text-xl">
+          <span className="text-purple-600 font-semibold">Transforming</span> biological research through{" "}
+          <span className="text-green-500 font-semibold">computational excellence</span>
+        </p>
+      </div>
+    ),
+  },
+  {
+    content: (
+      <div className="text-center px-6">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-black leading-tight">
+          Going beyond is our true <br /> purpose of Existing
+        </h1>
+        <p className="mt-4 text-lg md:text-xl">
+          <span className="text-pink-500 font-semibold">Transforming</span> Healthcare with{" "}
+          <span className="text-blue-500 font-semibold">Computational Research</span>
+        </p>
+      </div>
+    ),
+  },
+];
 
 function Hero() {
   const [next, setNext] = useState(0);
-  let ref = useRef(null)
+  let ref = useRef(null);
 
   const handleNext = () => {
-    setNext((previousValue) => {
-      if (previousValue == data.length - 2) {
-        return 0
-      }
-      return previousValue + 1
-    })
-
+    setNext((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
-  const handlePre = () => {
-    if (next == 0) {
-      setNext(data.length - 1)
-    } else {
-      setNext(next - 1);
-    }
 
+  const handlePre = () => {
+    setNext((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   useEffect(() => {
-    ref.current = setInterval(handleNext, 2000)
-    return (() => {
-      clearInterval(ref.current)
-    })
-  }, [])
+    ref.current = setInterval(handleNext, 2000);
+    return () => clearInterval(ref.current);
+  }, []);
 
   return (
-    <div className="w-full mt-16 bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 flex flex-col items-center z-1 pt-5" onMouseEnter={() => clearInterval(ref.current)}
-      onMouseLeave={() => ref.current = setInterval(handleNext, 2000)}>
+    <div
+      className="w-full min-h-130 mt-15 bg-gradient-to-r from-blue-100 via-purple-50 to-cyan-100 flex flex-col items-center justify-center relative"
+      onMouseEnter={() => clearInterval(ref.current)}
+      onMouseLeave={() => (ref.current = setInterval(handleNext, 2000))}
+    >
 
-      <div className="relative inline-block w-full z-1 ">
-        <button className="absolute top-1/2 transform -translate-y-1/2 text-[clamp(1.2rem,2vw,2.5rem)] cursor-pointer font-bold text-purple-400 border-none rounded-full z-2 flex justify-center left-8 hover:bg-green-300" onClick={handlePre}>{"<"}</button>
-        <img src={data[next].url} alt="" className="w-[97%] justify-center h-auto mx-6 rounded-[1.25rem] block m-auto shadow-[5px_5px_15px]"/>
-        <button className="absolute top-1/2 transform -translate-y-1/2 text-[clamp(1.2rem,2vw,2.5rem)] cursor-pointer font-bold text-purple-400 border-none rounded-full z-2 flex justify-center right-8 hover:bg-green-300" onClick={handleNext}>{">"}</button>
+      <button
+        className="absolute left-6 top-1/2 -translate-y-1/2 text-4xl text-blue-600 opacity-60 hover:opacity-100 transition"
+        onClick={handlePre}
+      >
+        ‹
+      </button>
+
+      {/* Dynamic Slide Content */}
+      <div key={next} className="animate-slide-left">
+        {slides[next].content}
       </div>
 
-      <div className="absolute top-[85%] transform -translate-y-1/2 text-[clamp(1.2rem,2vw,2.5rem)] cursor-pointer font-bold text-purple-400 border-none rounded-full z-2 flex justify-center">
-        <div className="flex items-center justify-center gap-4 absolute">
-          {data.map((_, i) => (
-            <div
-              key={i}
-              className={`flex justify-center transition-all-[0.2s ease-in-out] ${
-                         next === i ? 'bg-purple-500 scale-125' : 'bg-gray-300'}`}
-            ></div>
-          ))}
-        </div>
+      {/* Right Arrow (clean floating) */}
+      <button
+        className="absolute right-6 top-1/2 -translate-y-1/2 text-4xl text-blue-600 opacity-60 hover:opacity-100 transition"
+        onClick={handleNext}
+      >
+        ›
+      </button>
+
+      {/* Dots */}
+      <div className="flex items-center justify-center gap-3 mt-8">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setNext(i)}
+            className={`w-3 h-3 rounded-full transition-all ${next === i ? "bg-blue-600 scale-125" : "bg-gray-300"
+              }`}
+          ></button>
+        ))}
       </div>
-
-
     </div>
-
-
-
   );
 }
 

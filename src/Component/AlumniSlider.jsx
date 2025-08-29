@@ -47,7 +47,7 @@ function AlumniSlider() {
       <div className="mt-4 cursor-pointer mb-8">
         <Slider {...settings}>
           {data.map((d) => (
-            <div className="bg-white h-112 text-black rounded-3xl max-w-95 shadow-lg justify-between ml-6 [transform-style:preserve-3d] animate-[rotate_15s_linear_infinite]
+            <div className="bg-white h-112 text-black rounded-3xl max-w-90 shadow-lg justify-between ml-6 [transform-style:preserve-3d] animate-[rotate_15s_linear_infinite]
                               hover:[box-shadow:10px_10px_10px_rgba(244,239,239,0.2)]">
               <div className="h-56 rounded-tl-2xl rounded-tr-2xl bg-teal-100 flex justify-center items-center perspective-dramatic">
                 <img src={d.url} alt="image" className="h-52 w-52 rounded-full hover:translate-z-3"/>
@@ -56,9 +56,9 @@ function AlumniSlider() {
               <div className="flex flex-col justify-center items-center gap-3">
                 <h1 className="text-xl font-bold pt-4 ">{d.name}</h1>
                 <h2 className="font-medium mt-0 mx-4">{d.about}</h2>
-                <button className="mt-2.5 bg-purple-300 text-white text-lg px-1 py-2.5 rounded-xl border-none"
+                <button className="mt-2.5 bg-purple-300 text-white text-lg px-1 py-2.5 rounded-xl border-none hover:bg-purple-400 hover:scale-105 transition-transform"
                 onClick={() =>
-                    navigate(`/readmore/${encodeURIComponent(d.name)}`, {
+                    navigate(`/ReadMore/${encodeURIComponent(d.name)}`, {
                       state: { name: d.name, url: d.url },
                       }) }>Read More</button>
               </div>
@@ -70,57 +70,58 @@ function AlumniSlider() {
   )
 }
 
+
+export default AlumniSlider;
+
 const data = [
   {
-    name: `Dr. Muniraj Gupta`,
-    url: `../Dr.Muniraj Gupta.jpg`,
-    about: `P.hD Computer Science, JNU.  M.Tech., NSUT, New Delhi`
+    "name": "Dr. Muniraj Gupta",
+    "url": "../Dr.Muniraj Gupta.jpg",
+    "about": "PhD Computer Science, JNU. M.Tech., NSUT, New Delhi"
   },
   {
-    name: `Dr. Naveen Kumar Singh`,
-    url: `../Dr. Naveen Kumar Singh.jpg`,
-    about: `P.hD Computer Science, JNU. MCA, JNU`
+    "name": "Dr. Naveen Kumar Singh",
+    "url": "../Dr. Naveen Kumar Singh.jpg",
+    "about": "PhD Computer Science, JNU. MCA, JNU"
   },
   {
-    name: `Ms. Goldy Pandey`,
-    url: `../Ms. Goldy Pandey.jpg`,
-    about: `P.hD Computer Science, JNU. M.Tech CS&T, JNU`
+    "name": "Ms. Goldy Pandey",
+    "url": "../Ms. Goldy Pandey.jpg",
+    "about": "PhD Computer Science, JNU. M.Tech CS&T, JNU"
   },
   {
-    name: `Ms. Mankirat Kaur`,
-    url: `../Ms. Mankirat Kaur.jpg`,
-    about: `M.Tech Computer Science & Technology, JNU`
+    "name": "Ms. Mankirat Kaur",
+    "url": "../Ms. Mankirat Kaur.jpg",
+    "about": "M.Tech Computer Science & Technology, JNU"
   },
   {
-    name: `Mr. Jamaluddin`,
-    url: `../Mr. Jamaluddin.jpg`,
-    about: ` PhD(CS) at AMU, Aligarh. M.Tech(CS) JNU. MCA & BSc(CS) from AMU`
+    "name": "Mr. Jamaluddin",
+    "url": "../Mr. Jamaluddin.jpg",
+    "about": "PhD(CS) at AMU, Aligarh. M.Tech(CS) JNU. MCA & BSc(CS) from AMU"
   },
   {
-    name: `Mr. Tirandij Pradhan`,
-    url: `../Mr. Tirandij Pradhan.jpg`,
-    about: `PhD(CS) at AMU, Aligarh. M.Tech(CS) JNU. MCA & BSc(CS) from AMU`
+    "name": "Mr. Tirandij Pradhan",
+    "url": "../Mr. Tirandij Pradhan.jpg",
+    "about": "PhD(CS) at AMU, Aligarh. M.Tech(CS) JNU. MCA & BSc(CS) from AMU"
   },
   {
-    name: `Mr. Raja Babu`,
-    url: `../Mr. Raja Babu.jpg`,
-    about: ``
+    "name": "Mr. Raja Babu",
+    "url": "../Mr. Raja Babu.jpg",
+    "about": ""
   },
   {
-    name: `Mr. Gulam Mazid`,
-    url: `../Mr. Gulam Mazid.jpg`,
-    about: ``
+    "name": "Mr. Gulam Mazid",
+    "url": "../Mr. Gulam Mazid.jpg",
+    "about": ""
   },
   {
-    name: `Mr. Saquib Warsi`,
-    url: `../Mr. Saquib Warsi.jpg`,
-    about: ``
+    "name": "Mr. Saquib Warsi",
+    "url": "../Mr. Saquib Warsi.jpg",
+    "about": ""
   },
   {
-    name: `Mr. Mritunjay Raj`,
-    url: `../Mr. Mritunjay Raj.jpg`,
-    about: ``
-  },
-
+    "name": "Mr. Mritunjay Raj",
+    "url": "../Mr. Mritunjay Raj.jpg",
+    "about": ""
+  }
 ]
-export default AlumniSlider;
